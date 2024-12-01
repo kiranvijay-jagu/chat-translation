@@ -1,0 +1,128 @@
+/* General reset for margin, padding, and box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc; /* Light background color for a clean look */
+    color: #333; /* Dark text for contrast */
+    padding: 20px;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #2d3e50; /* Dark blue for a professional feel */
+}
+
+/* Form styling for both login and chat */
+form {
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 600px; /* Restrict form width for better appearance */
+    margin: 20px auto; /* Center form */
+}
+
+/* Chat history styling */
+#chat-history {
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    height: 300px; /* Limiting the height */
+    max-height: 300px; /* Maximum height of the chat history */
+    overflow-y: auto; /* Scrollable if messages exceed */
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 600px; /* Same width as the form for consistency */
+    margin: 20px auto; /* Center chat history */
+}
+
+/* Chat message styling */
+#chat-history p {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #f1f1f1; /* Light gray background for messages */
+    font-size: 1em;
+    word-wrap: break-word; /* Ensure long words break appropriately */
+}
+
+/* Styling for the message form */
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    color: #333;
+    height: 120px; /* Limit the height for textarea */
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #4CAF50; /* Classic green color */
+    color: white;
+    font-size: 1.2em;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Logout link styling */
+a {
+    color: #007bff; /* Classic blue color */
+    text-decoration: none;
+    font-size: 1em;
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    form {
+        padding: 15px;
+    }
+
+    textarea {
+        font-size: 1em;
+    }
+
+    button[type="submit"] {
+        font-size: 1.1em;
+    }
+
+    #chat-history {
+        height: 250px; /* Reduce height on smaller screens */
+        max-height: 250px;
+    }
+}

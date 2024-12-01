@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - {{ username }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <h1>Chat with {{ other_user }}</h1>
+
+    <!-- Display chat history -->
+    <div id="chat-history">
+        {% for message in chat_history %}
+            <p>{{ message }}</p>
+        {% endfor %}
+    </div>
+
+    <!-- Form to send new message -->
+    <form method="POST" action="{{ url_for('chat') }}">
+        <textarea name="message" placeholder="Type your message..." required></textarea>
+        <br>
+        <button type="submit">Send</button>
+    </form>
+
+    <br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</body>
+</html>

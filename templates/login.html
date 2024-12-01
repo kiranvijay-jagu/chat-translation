@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+    <h1>Login</h1>
+    <form method="POST">
+        <!-- Username Input -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <br><br>
+
+        <!-- Password Input -->
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <br><br>
+
+        <!-- Target Language Selection -->
+        <label for="target_language">Select Your Preferred Target Language:</label>
+        <select id="target_language" name="target_language" required>
+            <option value="" disabled selected>Select Language</option>
+            <option value="en">English</option>
+            <option value="hi">Hindi</option>
+        </select>
+        <br><br>
+
+        <!-- Submit Button -->
+        <button type="submit">Login</button>
+    </form>
+</body>
+</html>
